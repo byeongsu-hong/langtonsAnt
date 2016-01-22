@@ -7,10 +7,11 @@ var FLOOR = [];
 
 var WIDTH = 1000;
 var HEIGHT = 1000;
-var CELL_SIZE = 1;
-var SPEED = 1000;
+var CELL_SIZE = 2;
+var SPEED = 100;
 
-var ant = new Ant();
+// Create Ant
+var ant = new Ant(300, 500, "LLRR");
 
 function init() {
     var patternText = document.getElementById("pattern");

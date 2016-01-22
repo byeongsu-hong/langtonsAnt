@@ -12,13 +12,13 @@
  *
  */
 
-var pattern= "LRRRRRLLR";
 var colors = ["blue", "red", "yellow", "green", "#333333", "aquamarine", "chartreuse", "mediumslateblue", "purple"];
 
-function Ant() {
-    this.posx = WIDTH / 2;
-    this.posy = HEIGHT / 2;
+function Ant(x, y, pattern) {
+    this.posx = x;
+    this.posy = y;
     this.dest = 3;
+    this.pattern = pattern;
 
     this.getColor = function() {
         return FLOOR[this.posx][this.posy];
@@ -46,7 +46,7 @@ function Ant() {
                 this.posy += CELL_SIZE;
                 break;
             default:
-                alert("엥");
+                alert("nope");
         }
     };
 
@@ -77,11 +77,11 @@ function Ant() {
     this.do = function(context) {
         var color = this.getColor();
 
-        if (pattern[color] == "L") {
+        if (this.pattern[color] == "L") {
             this.left();
         }
 
-        if (pattern[color] == "R") {
+        if (this.pattern[color] == "R") {
             this.right();
         }
 
