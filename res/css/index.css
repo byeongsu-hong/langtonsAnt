@@ -18,10 +18,7 @@ canvas {
 }
 
 .content input {
+    width : 1000px;
     margin: 30px auto;
     display : block;
-}
-
-.content input[type=range] {
-    width : 1000px;
 }
