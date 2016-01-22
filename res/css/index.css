@@ -1,0 +1,27 @@
+html, body {
+    color : white;
+    background-color : #555;
+}
+
+.canvas {
+    margin: 50px auto auto;
+    text-align : center;
+}
+
+canvas {
+    border : solid 2px #fff;
+    background-color : #333;
+}
+
+.content {
+    text-align : center;
+}
+
+.content input {
+    margin: 30px auto;
+    display : block;
+}
+
+.content input[type=range] {
+    width : 1000px;
+}
