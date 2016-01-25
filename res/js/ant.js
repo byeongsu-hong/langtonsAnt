@@ -24,6 +24,11 @@ function Ant(x, y, pattern) {
         return FLOOR[this.posx][this.posy];
     };
 
+    this.drawAnt = function(context) {
+        context.fillStyle = "white";
+        context.fillRect(this.posx, this.posy, 3, 3);
+    };
+
     this.drawColor = function(color, context) {
         FLOOR[this.posx][this.posy] = color;
 

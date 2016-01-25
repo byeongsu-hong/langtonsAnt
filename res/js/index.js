@@ -7,12 +7,14 @@ var FLOOR = [];
 
 var WIDTH = 1000;
 var HEIGHT = 1000;
-var CELL_SIZE = 5;
+var CELL_SIZE = 1;
 var SPEED = 100;
 
 // Create Ant
-var ant = new Ant(500, 500, "LRRRRRLLR");
-var hey = function(){};
+var ant1 = new Ant(400, 500, "LLRR");
+var ant2 = new Ant(600, 500, "LLRRRLRLRLLR");
+
+var hey;
 
 function init() {
     CANVAS.setAttribute("width", WIDTH + "");
@@ -36,7 +38,8 @@ function render(){
 
     try {
         for(var i = 0; i < SPEED; i++) {
-            ant.do(context);
+            ant1.do(context);
+            ant2.do(context);
         }
     } catch(TypeError) {
         window.clearInterval(hey);
