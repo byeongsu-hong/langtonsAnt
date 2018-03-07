@@ -3,16 +3,15 @@
  */
 
 var CANVAS = document.getElementById('test');
-var FLOOR = [];
+var FLOOR = [[]];
 
-var WIDTH = 1000;
-var HEIGHT = 1000;
+var WIDTH = 100;
+var HEIGHT = 100;
 var CELL_SIZE = 1;
-var SPEED = 100;
+var SPEED = 1;
 
 // Create Ant
-var ant1 = new Ant(400, 500, "LLRR");
-var ant2 = new Ant(600, 500, "LLRRRLRLRLLR");
+var ant1 = new Ant(50, 50, "LLRR");
 
 var hey;
 
@@ -24,13 +23,13 @@ function init() {
         var arr = [];
 
         for(var j = 0; j < HEIGHT; j++) {
-            arr.push(0);
+            arr[j] = 0;
         }
 
-        FLOOR.push(arr);
+        FLOOR[i] = arr[j];
     }
 
-    hey = window.setInterval(render, 1);
+    hey = window.setInterval(render, 10);
 }
 
 function render(){
@@ -39,15 +38,9 @@ function render(){
     try {
         for(var i = 0; i < SPEED; i++) {
             ant1.do(context);
-            ant2.do(context);
         }
     } catch(TypeError) {
         window.clearInterval(hey);
         alert("The End!");
     }
-}
-
-function changeSpeed(speed) {
-    console.log("change to ", SPEED, "=>", speed);
-    SPEED = speed;
 }

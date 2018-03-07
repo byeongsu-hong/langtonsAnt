@@ -4,21 +4,14 @@ html, body {
 }
 
 .canvas {
-    margin: 50px auto auto;
+    margin: 20px auto auto;
     text-align : center;
 }
 
 canvas {
+    width: 900px;
+    height: 900px;
     border : solid 2px #fff;
     background-color : #333;
-}
-
-.content {
-    text-align : center;
-}
-
-.content input {
-    width : 1000px;
-    margin: 30px auto;
-    display : block;
+    image-rendering: pixelated;
 }
